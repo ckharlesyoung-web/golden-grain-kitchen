@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden Grain Kitchen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--gold:#d4af37;--dark:#111;--light:#f7f7f7;--accent:#e63946}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins',sans-serif;color:#222;background:#fff}
+    header{position:sticky;top:0;background:#111;color:#fff;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;z-index:10}
+    .brand{font-weight:700;color:var(--gold);font-size:22px}
+    nav a{color:#fff;text-decoration:none;margin:0 12px;font-size:14px}
+    .hero{min-height:70vh;background:linear-gradient(120deg,rgba(0,0,0,.7),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px}
+    .hero h1{font-size:48px;margin:0 0 10px}
+    .hero p{max-width:700px;margin:0 auto 24px}
+    .btn{background:var(--gold);color:#111;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:600}
+    section{padding:60px 24px;max-width:1100px;margin:auto}
+    h2{color:#111;margin-bottom:20px}
+    .grid{display:grid;gap:20px}
+    .menu{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .card{background:#fafafa;border-radius:14px;padding:20px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+    .price{color:var(--accent);font-weight:700;margin-top:8px}
+    .packages{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .package{border:2px solid var(--gold)}
+    .about{background:var(--light);border-radius:16px}
+    footer{background:#111;color:#fff;padding:30px 24px;text-align:center}
+    .contact a{color:var(--gold);text-decoration:none}
+    .umbrella{background:url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;border-radius:16px;color:#fff;padding:40px}
+    @media(max-width:600px){.hero h1{font-size:32px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Golden Grain Kitchen</div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#packages">Packages</a>
+      <a href="#order">Order</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Delicious • Fresh • Affordable</h1>
+      <p>Premium wheat & rice meals served fast — perfect for individuals, families, and group sharing under our comfortable outdoor umbrellas.</p>
+      <a class="btn" href="https://wa.me/256707397783">Order on WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>Signature Menu</h2>
+    <div class="grid menu">
+      <div class="card"><h3>Chapati Chicken Roll</h3><p>Soft wheat chapati with grilled chicken and fresh salad.</p><div class="price">UGX 10,000</div></div>
+      <div class="card"><h3>Coconut Rice Bowl</h3><p>Fragrant rice served with vegetables or chicken.</p><div class="price">UGX 9,000</div></div>
+      <div class="card"><h3>Vegetable Pilaf</h3><p>Seasoned rice with garden vegetables.</p><div class="price">UGX 8,000</div></div>
+      <div class="card"><h3>Stuffed Flatbread</h3><p>Wheat flatbread filled with spiced vegetables.</p><div class="price">UGX 7,000</div></div>
+    </div>
+  </section>
+
+  <section id="packages">
+    <h2>Premium Combination Plates</h2>
+    <div class="grid packages">
+      <div class="card package">
+        <h3>Executive Wheat & Rice Plate</h3>
+        <ul>
+          <li>Chapati roll</li>
+          <li>Coconut rice</li>
+          <li>Grilled chicken</li>
+          <li>Fresh salad</li>
+        </ul>
+        <div class="price">UGX 18,000</div>
+      </div>
+      <div class="card package">
+        <h3>Vegetarian Serenity Plate</h3>
+        <ul>
+          <li>Vegetable pilaf</li>
+          <li>Stuffed flatbread</li>
+          <li>Yogurt sauce</li>
+          <li>Garden salad</li>
+        </ul>
+        <div class="price">UGX 15,000</div>
+      </div>
+      <div class="card package">
+        <h3>Royal Sharing Basket</h3>
+        <ul>
+          <li>Crispy wheat fingers</li>
+          <li>Rice croquettes</li>
+          <li>Assorted sauces</li>
+          <li>Drinks</li>
+        </ul>
+        <div class="price">UGX 35,000</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="umbrella">
+    <h2>Outdoor Umbrella Seating</h2>
+    <p>Relax and enjoy your meals under shaded umbrellas designed for groups of 15–20 guests. Perfect for family moments and casual meetings.</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Golden Grain Kitchen specializes in affordable premium meals made from wheat and rice. Our mission is to serve clean, tasty, and satisfying meals quickly while offering a comfortable outdoor dining experience.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Orders</h2>
+    <div class="contact">
+      <p>Phone: <a href="tel:+256707397783">+256707397783</a> / <a href="tel:+256779184613">+256779184613</a></p>
+      <p>WhatsApp: <a href="https://wa.me/256707397783">Chat Now</a></p>
+    </div>
+  </section>
+
+    <section id="order">
+    <h2>Order Online (WhatsApp)</h2>
+    <div class="card">
+      <p>Select your meal and send the order directly to WhatsApp.</p>
+      <label>Meal</label><br/>
+      <select id="meal">
+        <option>Chapati Chicken Roll</option>
+        <option>Coconut Rice Bowl</option>
+        <option>Vegetable Pilaf</option>
+        <option>Stuffed Flatbread</option>
+        <option>Executive Wheat & Rice Plate</option>
+        <option>Vegetarian Serenity Plate</option>
+        <option>Royal Sharing Basket</option>
+      </select><br/><br/>
+      <label>Quantity</label><br/>
+      <input id="qty" type="number" value="1" min="1" style="padding:8px;border-radius:6px;border:1px solid #ccc"/><br/><br/>
+      <label>Your Name</label><br/>
+      <input id="cname" type="text" placeholder="Customer name" style="padding:8px;border-radius:6px;border:1px solid #ccc"/><br/><br/>
+      <button class="btn" onclick="sendOrder('256707397783')">Order via WhatsApp (Line 1)</button>
+      <button class="btn" style="margin-left:10px" onclick="sendOrder('256779184613')">Order via WhatsApp (Line 2)</button>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Food Gallery</h2>
+    <div class="grid menu">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800" style="width:100%;border-radius:12px"/>
+      <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=800" style="width:100%;border-radius:12px"/>
+      <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800" style="width:100%;border-radius:12px"/>
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800" style="width:100%;border-radius:12px"/>
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800" style="width:100%;border-radius:12px"/>
+      <img src="https://images.unsplash.com/photo-1512058564366-c9e3e046c7f6?w=800" style="width:100%;border-radius:12px"/>
+    </div>
+  </section>
+
+  <section id="go-live" class="about">
+    <h2>Go Live for Free</h2>
+    <ol>
+      <li>Create a free GitHub account.</li>
+      <li>Upload this website as a new repository.</li>
+      <li>Enable GitHub Pages in Settings.</li>
+      <li>Your free website link will look like: <b>golden-grain-kitchen.github.io</b></li>
+      <li>Share the link with customers for direct ordering.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>© 2025 Golden Grain Kitchen — Eat • Connect • Enjoy</p>
+    <section id="order">
+    <h2>Quick Order</h2>
+    <p>Scan the QR code below or tap the button to place your order instantly on WhatsApp.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:center">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/256707397783" alt="WhatsApp Order QR" style="border-radius:12px" />
+      <a class="btn" href="https://wa.me/256707397783?text=Hello%20Golden%20Grain%20Kitchen%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">Order Now via WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Food Gallery</h2>
+    <div class="grid menu">
+      <div class="card"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop" style="width:100%;border-radius:12px" alt="Chapati Roll"/></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1604908177522-429b8a44a1f3?q=80&w=800&auto=format&fit=crop" style="width:100%;border-radius:12px" alt="Rice Bowl"/></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=800&auto=format&fit=crop" style="width:100%;border-radius:12px" alt="Grilled Chicken"/></div>
+    </div>
+  </section>
+
+  <section id="delivery" class="about">
+    <h2>Delivery & Rider Request</h2>
+    <p>Need delivery? Tap below to request a rider instantly.</p>
+    <a class="btn" href="tel:+256707397783">Call for Delivery</a>
+  </section>
+
+  <section id="location">
+    <h2>Find Us</h2>
+    <iframe src="https://www.google.com/maps?q=Kampala&output=embed" width="100%" height="300" style="border:0;border-radius:16px" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>© 2025 Golden Grain Kitchen — Eat • Connect • Enjoy</p>
+  </footer>
+
+  <script>
+    function sendOrder(phone){
+      const meal=document.getElementById('meal').value;
+      const qty=document.getElementById('qty').value;
+      const name=document.getElementById('cname').value||'Customer';
+      const text=encodeURIComponent(`Hello Golden Grain Kitchen, I want to order: ${meal} (Qty: ${qty}). Name: ${name}`);
+      window.open(`https://wa.me/${phone}?text=${text}`,'_blank');
+    }
+  </script>
+</body>
+</html>

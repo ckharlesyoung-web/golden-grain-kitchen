@@ -1,75 +1,206 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Golden Grain Kitchen</title>
+<title>Royal Grain Kitchen</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {font-family: Arial, sans-serif; margin:0; background:#f9f6f1;}
-header {background:#d4a017; color:white; padding:20px; text-align:center;}
-nav {background:#333; padding:10px; text-align:center;}
-nav a {color:white; margin:10px; text-decoration:none;}
-section {padding:20px;}
-.menu-item {background:white; margin:10px 0; padding:15px; border-radius:8px;}
-.gallery img {width:100%; max-width:300px; margin:10px; border-radius:8px;}
-.order-btn {display:inline-block; padding:15px 25px; background:#25D366; color:white; text-decoration:none; border-radius:6px; font-size:18px;}
-footer {background:#333; color:white; text-align:center; padding:15px;}
+body{
+font-family:Poppins;
+margin:0;
+background:#fafafa;
+}
+
+header{
+background:#111;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+color:#d4a017;
+}
+
+nav a{
+color:white;
+margin-left:15px;
+text-decoration:none;
+}
+
+.hero{
+height:70vh;
+background:url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero h2{
+background:rgba(0,0,0,0.6);
+padding:20px;
+border-radius:10px;
+}
+
+section{
+padding:40px;
+max-width:1200px;
+margin:auto;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.content{
+padding:15px;
+}
+
+.price{
+color:#d4a017;
+font-weight:bold;
+}
+
+button{
+background:#25D366;
+border:none;
+padding:10px;
+color:white;
+width:100%;
+border-radius:8px;
+cursor:pointer;
+margin-top:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Golden Grain Kitchen</h1>
-<p>Premium Wheat & Rice Meals</p>
-</header>
-
+<h1>Royal Grain Kitchen</h1>
 <nav>
-<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#menu">Packages</a>
 <a href="#gallery">Gallery</a>
 <a href="#order">Order</a>
 </nav>
+</header>
+
+<div class="hero">
+<h2>Premium Wheat & Rice Cuisine • Fast • Fresh • Affordable</h2>
+</div>
+
+<section id="about">
+<h2>About Us</h2>
+<p>
+Royal Grain Kitchen offers hotel-style wheat and rice meals at affordable prices.
+Enjoy outdoor umbrella dining, fast service and premium food quality.
+</p>
+</section>
 
 <section id="menu">
-<h2>Our Popular Packages</h2>
-
-<div class="menu-item">
-<h3>Executive Combo Plate</h3>
-<p>Chapati Roll + Coconut Rice + Grilled Chicken + Fresh Salad</p>
-</div>
-
-<div class="menu-item">
-<h3>Vegetarian Serenity Plate</h3>
-<p>Vegetable Pilaf + Stuffed Flatbread + Yogurt Sauce + Garden Salad</p>
-</div>
-
-<div class="menu-item">
-<h3>Family Sharing Basket</h3>
-<p>Crispy Wheat Fingers + Rice Croquettes + Sauces + Drinks</p>
-</div>
+<h2>Premium Packages</h2>
+<div class="menu" id="menu"></div>
 </section>
 
 <section id="gallery">
 <h2>Food Gallery</h2>
 <div class="gallery">
-<img src="https://via.placeholder.com/300x200" alt="Food 1">
-<img src="https://via.placeholder.com/300x200" alt="Food 2">
-<img src="https://via.placeholder.com/300x200" alt="Food 3">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+<img src="https://images.unsplash.com/photo-1512058564366-c9e3b8e0f3c8">
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
 </div>
 </section>
 
 <section id="order">
-<h2>Order Now</h2>
-<p>Click below to order directly on WhatsApp</p>
-<a class="order-btn" href="https://wa.me/256707397783" target="_blank">Order via WhatsApp</a>
+<h2>Order via WhatsApp</h2>
+<a href="https://wa.me/256707397783">
+<button>Place Order Now</button>
+</a>
 </section>
 
 <footer>
-<p>Call: +256707397783 / +256779184613</p>
-<p>© Golden Grain Kitchen</p>
+<p>Call / WhatsApp: +256707397783 | +256779184613</p>
+<p>© 2026 Royal Grain Kitchen</p>
 </footer>
+
+<script>
+
+const meals=[
+["Executive Wheat & Rice Combo",20000],
+["Vegetarian Serenity Plate",16000],
+["Royal Sharing Basket",30000],
+["Chicken Pilaf Deluxe",19000],
+["Beef Rice Bowl",18000],
+["Family Rice Feast",38000],
+["Golden Chapati Wrap",12000],
+["Rice & Chicken BBQ",21000],
+["Vegetable Rice Delight",15000],
+["Executive Lunch Plate",23000],
+["Evening Snack Combo",11000],
+["Golden Family Pack",45000]
+];
+
+let container=document.getElementById("menu");
+
+meals.forEach(meal=>{
+container.innerHTML+=`
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?food,rice">
+<div class="content">
+<h3>${meal[0]}</h3>
+<p class="price">UGX ${meal[1]}</p>
+<button onclick="order('${meal[0]}')">Order on WhatsApp</button>
+</div>
+</div>`;
+});
+
+function order(name){
+window.open(`https://wa.me/256707397783?text=Hello Royal Grain Kitchen, I want to order ${name}`);
+}
+
+</script>
 
 </body>
 </html>
- 
